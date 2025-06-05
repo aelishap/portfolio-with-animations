@@ -30,14 +30,14 @@ const projects = [
     color: "#4a90e2",
     liveLink: "https://development.jewelpreview.com/",
   },
-   {
+  {
     title: "CaratWise",
     description: `Designed and developed advanced diamond selection and comparison features for the CaratWise platform. Implemented 3D diamond viewer integration, real-time filters, and interactive comparison tools to enhance the buying experience.`,
     src: Caratwise,
     color: "#4a90e2",
     liveLink: "https://development.caratwise.com/#/",
   },
-   {
+  {
     title: "NTS Pro – Roofing Inspection Platform",
     description: `Built dynamic inspection forms with image uploads, real-time report tracking, and secure role-based access for roofing professionals.`,
     src: NTS,
@@ -81,12 +81,12 @@ export default function Projects() {
 }
 
 function Card({ title, description, color, src, liveLink }) {
+
   return (
     <motion.div
-      className="bg-zinc-900 rounded-lg overflow-hidden shadow-lg flex flex-col cursor-pointer"
+      className="relative border rounded-xl p-0 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm border-blue-400/20 hover:border-teal-500 flex flex-col overflow-hidden"
       variants={cardVariants}
       whileHover={{ scale: 1.03, boxShadow: "0 10px 20px rgba(0,0,0,0.5)" }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       {/* Image */}
       <a href={liveLink} target="_blank" rel="noopener noreferrer" className="block">
@@ -107,27 +107,16 @@ function Card({ title, description, color, src, liveLink }) {
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-4 py-1 text-sm font-semibold rounded-full transition-colors duration-300 cursor-pointer"
-            style={{
-              backgroundColor: color,
-              color: color === "#fff" ? "#000" : "#fff",
-              boxShadow: `0 0 8px ${color}`,
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#fff";
-              e.currentTarget.style.color = color;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = color;
-              e.currentTarget.style.color = color === "#fff" ? "#000" : "#fff";
-            }}
+            className="inline-block px-4 py-1 text-sm font-semibold rounded-full transition-colors duration-300 cursor-pointer bg-teal-500/10 text-teal-400 hover:bg-teal-400/10 hover:text-teal-300"
           >
             Live
           </a>
         </div>
 
         {/* Description */}
-        <p className="text-gray-400 text-sm flex-grow">{description}</p>
+        <p className="text-gray-300 text-sm flex-grow italic border-l-2 border-teal-500 pl-3">
+          {description}
+        </p>
       </div>
     </motion.div>
   );
