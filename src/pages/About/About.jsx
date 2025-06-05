@@ -4,9 +4,9 @@ import OlovaLogo from "@/assets/images/olova.png";
 export default function About() {
   return (
     <>
-      <section id="about" className="py-16 md:py-32  text-white bg-[#04081A]">
+      <section id="about" className="py-16 md:py-48  text-white bg-[#04081A]">
         <div className="mx-auto max-w-6xl space-y-8 px-6 md:space-y-16">
-          <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-white">
+          <h2 className="relative z-10 text-4xl font-medium lg:text-5xl text-white flex w-full justify-center items-center">
             Web Developer | Framework Creator
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
