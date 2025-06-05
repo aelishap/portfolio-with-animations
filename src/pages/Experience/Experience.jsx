@@ -53,35 +53,35 @@ const ExperienceCard = ({
 
 const ExperienceSection = () => {
   const experiences = [
-  {
-    icon: Code2,
-    title: "Software Developer",
-    company: "SEEPOSSIBLE",
-    period: "Aug 2024 – Present",
-    description: `Developed a CAD file portal with secure role-based access, integrated Stripe & Razorpay for full e-commerce flow, and built custom dashboards using Next.js and Directus.`,
-  },
-  {
-    icon: Code2,
-    title: "Software Developer",
-    company: "Growder Technovation Pvt. Ltd.",
-    period: "Apr 2023 – Jul 2024",
-    description: `Created B2B order and product management systems, led admin/sub-admin role logic, and developed ticketing and franchise lifecycle management platforms.`,
-  },
-  {
-    icon: Code2,
-    title: "React.js Developer",
-    company: "Ciphernutz IT Services",
-    period: "May 2022 – Mar 2023",
-    description: `Built SaaS products including an educational gaming platform and real estate management system. Implemented real-time status updates and user role logic.`,
-  },
-  {
-    icon: Layers,
-    title: "Angular Developer (Intern)",
-    company: "DI Solutions",
-    period: "Sep 2021 – Mar 2022",
-    description: `Worked on client web apps like Zupria and WiUpdate, developed UI components, and implemented dynamic routing for domain purchasing systems.`,
-  },
-];
+    {
+      icon: Code2,
+      title: "Software Developer",
+      company: "SEEPOSSIBLE",
+      period: "Aug 2024 – Present",
+      description: `Developed a CAD file portal with secure role-based access, integrated Stripe & Razorpay for full e-commerce flow, and built custom dashboards using Next.js and Directus.`,
+    },
+    {
+      icon: Layers,
+      title: "Software Developer",
+      company: "Growder Technovation Pvt. Ltd.",
+      period: "Apr 2023 – Jul 2024",
+      description: `Created B2B order and product management systems, led admin/sub-admin role logic, and developed ticketing and franchise lifecycle management platforms.`,
+    },
+    {
+      icon: Layers,
+      title: "React.js Developer",
+      company: "Ciphernutz IT Services",
+      period: "May 2022 – Mar 2023",
+      description: `Built SaaS products including an educational gaming platform and real estate management system. Implemented real-time status updates and user role logic.`,
+    },
+    {
+      icon: Code2,
+      title: "Angular Developer (Intern)",
+      company: "DI Solutions",
+      period: "Sep 2021 – Mar 2022",
+      description: `Worked on client web apps like Zupria and WiUpdate, developed UI components, and implemented dynamic routing for domain purchasing systems.`,
+    },
+  ];
 
   return (
     <>
