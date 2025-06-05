@@ -13,28 +13,34 @@ import { motion } from "framer-motion";
 const EducationSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const educationData = [
-    {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
-      description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
-      description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
-    },
-  ];
+const educationData = [
+  {
+    degree: "Bachelor of Engineering in Computer Engineering",
+    school: "Sarvajanik College of Engineering and Technology",
+    mascot: "🎓",
+    year: "2018 – 2022",
+    achievements: ["CGPA: 9.56 / 10.0"],
+    skills: [
+      "Data Structures",
+      "Web Development",
+      "Database Management",
+      "Software Engineering",
+    ],
+    description:
+      "Completed a rigorous engineering program with a focus on full-stack development, problem solving, and system design.",
+  },
+  {
+    degree: "XII (Gujarat Board of Secondary Education)",
+    school: "P.P. Savani Vidhyabhavan",
+    mascot: "🏫",
+    year: "2017 – 2018",
+    achievements: ["Score: 84%"],
+    skills: ["Mathematics", "Physics", "Chemistry", "Computer Science"],
+    description:
+      "Built a solid academic foundation in science, which led to a passion for software engineering and technology.",
+  },
+];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -67,7 +73,7 @@ const EducationSection = () => {
         <div className="absolute inset-0 border border-white/[0.05] grid grid-cols-2 md:grid-cols-4" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -105,7 +111,7 @@ const EducationSection = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
                     <span className="text-3xl">{edu.mascot}</span>
-                    <h3 className="text-2xl font-bold text-white">
+                    <h3 className="text-xl font-bold text-white">
                       {edu.degree}
                     </h3>
                   </div>

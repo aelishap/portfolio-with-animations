@@ -27,11 +27,11 @@ const ExperienceCard = ({
         <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
           {title}
         </h3>
-        <div className="flex justify-between items-center text-gray-300">
-          <span className="font-semibold text-blue-400">{company}</span>
-          <span className="text-sm font-mono bg-blue-500/10 px-3 py-1 rounded-full">
+        <div className="flex md:block lg:flex justify-between items-center text-gray-300">
+          <p className="font-semibold text-blue-400">{company}</p>
+          <p className="text-sm w-fit font-mono bg-blue-500/10 px-3 py-1 rounded-full">
             {period}
-          </span>
+          </p>
         </div>
         <p className="text-gray-300 border-l-4 border-blue-500/50 pl-4 mt-4 leading-relaxed">
           {description}
@@ -53,31 +53,35 @@ const ExperienceCard = ({
 
 const ExperienceSection = () => {
   const experiences = [
-    {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
-      description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
-    },
-    {
-      icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
-      description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
-    },
-    {
-      icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
-      period: "2023 - Present",
-      description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
-    },
-  ];
+  {
+    icon: Code2,
+    title: "Software Developer",
+    company: "SEEPOSSIBLE",
+    period: "Aug 2024 – Present",
+    description: `Developed a CAD file portal with secure role-based access, integrated Stripe & Razorpay for full e-commerce flow, and built custom dashboards using Next.js and Directus.`,
+  },
+  {
+    icon: Code2,
+    title: "Software Developer",
+    company: "Growder Technovation Pvt. Ltd.",
+    period: "Apr 2023 – Jul 2024",
+    description: `Created B2B order and product management systems, led admin/sub-admin role logic, and developed ticketing and franchise lifecycle management platforms.`,
+  },
+  {
+    icon: Code2,
+    title: "React.js Developer",
+    company: "Ciphernutz IT Services",
+    period: "May 2022 – Mar 2023",
+    description: `Built SaaS products including an educational gaming platform and real estate management system. Implemented real-time status updates and user role logic.`,
+  },
+  {
+    icon: Layers,
+    title: "Angular Developer (Intern)",
+    company: "DI Solutions",
+    period: "Sep 2021 – Mar 2022",
+    description: `Worked on client web apps like Zupria and WiUpdate, developed UI components, and implemented dynamic routing for domain purchasing systems.`,
+  },
+];
 
   return (
     <>
@@ -108,7 +112,7 @@ const ExperienceSection = () => {
           {/* Section header with enhanced effects */}
           <div className="flex flex-col items-center space-y-8 mb-20">
             <div className="relative">
-              <h2 className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-center">
+              <h2 className="text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-center">
                 Professional Journey
               </h2>
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
@@ -119,7 +123,7 @@ const ExperienceSection = () => {
           </div>
 
           {/* Experience grid with improved layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}
